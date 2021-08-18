@@ -5,8 +5,12 @@ import spark.Response;
 
 import static spark.Spark.*;
 
-public class App 
-{
+/**
+ * Minimal web app example for Heroku using SparkWeb
+ *
+ * @author Camila Fetecua
+ */
+public class App {
     /**
      * This main method uses SparkWeb static methods and lambda functions to
      * create a simple Hello World web app. It maps the lambda function to the
@@ -58,5 +62,4 @@ public class App
         }
         return 4567; //returns default port if heroku-port isn't set (i.e. on localhost)
     }
-
 }
