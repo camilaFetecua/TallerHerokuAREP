@@ -21,6 +21,8 @@ public class App {
         port(getPort());
         get("/inputdata", (req, res) -> inputDataPage(req, res));
         get("/results", (req, res) -> resultsPage(req, res));
+        get("/inputDataIEXCloud", App::inputDataPageIEXCloud);
+
     }
 
     private static String inputDataPage(Request req, Response res) {
@@ -49,6 +51,27 @@ public class App {
                 req.queryParams("lastname");
     }
 
+    private static String inputDataPageIEXCloud(Request req, Response res) {
+        String pageContent
+                = "<!DOCTYPE html>"
+                + "<html>"
+                + "<body>"
+                + "<h2>HTML Forms</h2>"
+                + "<form action=\"/iexService\">"
+                + "  Stock:<br>"
+                + "  <input type=\"text\" name=\"stock\" value=\"aapl\">"
+                + "  <br>"
+                + "  Time Series:<br>"
+                + "  <input type=\"text\" name=\"time_series\" value=\"today\">"
+                + "  <br><br>"
+                + "  <input type=\"submit\" value=\"Submit\">"
+                + "</form>"
+                + "<p>If you click the \"Submit\" button, the form-data will be sent to a page called \"/results\".</p>"
+                + "</body>"
+                + "</html>";
+        return pageContent;
+    }
+
     /**
      * This method reads the default port as specified by the PORT variable in
      * the environment.
@@ -62,4 +85,6 @@ public class App {
         }
         return 4567; //returns default port if heroku-port isn't set (i.e. on localhost)
     }
-}
+
+
+ }
