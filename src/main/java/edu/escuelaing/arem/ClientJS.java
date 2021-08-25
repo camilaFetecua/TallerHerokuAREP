@@ -2,6 +2,9 @@ package edu.escuelaing.arem;
 
 import com.google.gson.Gson;
 
+/**
+ * Client class written in JS invoking REST services
+ */
 public class ClientJS {
     private static String page;
     private Gson gson;
