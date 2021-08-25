@@ -22,7 +22,7 @@ Para este laboratorio utilizamos
    Para este proyecto utilizamos 5 clases:
   + **AlphaAdvantageHttpStockService:** Clase donde retorna la Url con el stock de AlphaAdvantage con un intervalo
   + **IEXCloudHttpStockService:** Clase donde retorna la Url cloud.iexapis con el stock decon un intervalo
-  + **HttpStockService:** Clase para invocar servicios get desde Java
+  + **HttpStockService:** Clase para invocar servicios get desde Java y recibe los request.
   + **App:** Es la clase ejemplo de aplicación web mínima para Heroku usando SparkWe
   + **CientJS:** Clase de cliente escrita en JS que invoca los servicios REST
 
